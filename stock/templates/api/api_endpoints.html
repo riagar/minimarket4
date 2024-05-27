@@ -1,0 +1,23 @@
+{% extends "api/api_base.html" %}
+{% load static %}
+{% block title %}Endpoints API - Mi Sitio{% endblock %}
+{% block content %}
+<h1>Endpoints de la API</h1>
+<ul>
+    <li>
+        <strong>GET /api/items/</strong> - Obtener una lista de todos los artículos.
+    </li>
+    <li>
+        <strong>POST /api/items/</strong> - Crear un nuevo artículo. (Requiere datos del artículo en el cuerpo de la solicitud)
+    </li>
+    <li>
+        <strong>GET /api/items/&lt;id&gt;/</strong> - Obtener los detalles de un artículo específico.
+    </li>
+    <li>
+        <strong>PUT /api/items/&lt;id&gt;/</strong> - Actualizar un artículo específico. (Requiere datos actualizados en el cuerpo de la solicitud)
+    </li>
+    <li>
+        <strong>DELETE /api/items/&lt;id&gt;/</strong> - Eliminar un artículo específico.
+    </li>
+</ul>
+{% endblock %}

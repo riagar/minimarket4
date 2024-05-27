@@ -1,0 +1,9 @@
+{% extends "api/api_base.html" %}
+{% load static %}
+{% block title %}Detalle del Recurso - API{% endblock %}
+{% block content %}
+<h1 class="white-text">Ingreso de Stock</h1>
+<p class="white-text">ID: {{ recurso.id }}</p>
+<p class="white-text">Nombre: {{ recurso.nombre }}</p>
+<p class="white-text">Descripción: {{ recurso.descripcion }}</p>
+{% endblock %}

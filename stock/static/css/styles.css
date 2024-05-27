@@ -1,0 +1,28 @@
+head {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin: 0; /* Para quitar el margen predeterminado del cuerpo */
+    padding: 0; /* Para quitar el relleno predeterminado del cuerpo */
+    color: rgb(255, 255, 255); /* Establece el color del texto en blanco */
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin: 0; /* Para quitar el margen predeterminado del cuerpo */
+    padding: 0; /* Para quitar el relleno predeterminado del cuerpo */
+    color: rgb(255, 255, 255); /* Establece el color del texto en blanco */
+}
+
+div {
+    color: rgb(255, 0, 0);
+}
+
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row" id="data-container">
+    <!-- Los datos de la API se insertarán aquí -->
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // URL de tu API
+  var apiUrl = "{% url 'categoria-list' %}";  // Ajusta esto según el nombre correcto de la URL
+
+  // Realizar la solicitud GET a la API
+  $.get(apiUrl, function(data) {
+    // Recorrer los datos y crear las tarjetas
+    data.forEach(function(dato) {
+      var cardHtml = `
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header black-text">
+              ${dato.nombre}  <!-- Ajusta esto según tus campos de modelo -->
+            </div>
+            <ul class="list-group list-group-flush">
+              <!-- Puedes agregar más campos aquí -->
+              <li class="list-group-item black-text">ID: ${dato.id}</li>
+            </ul>
+          </div>
+        </div>
+      `;
+      $('#data-container').append(cardHtml);
+    });
+  });
+});
+</script>
+{% endblock %}
